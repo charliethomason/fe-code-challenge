@@ -7,6 +7,7 @@ $spot-list-width: 460px;
 }
 
 .Search-content {
+    display: flex;
     position: absolute;
     top: 0;
     left: $spot-list-width;

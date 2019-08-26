@@ -18,6 +18,7 @@
 @import "utils/mixins/ellipsis";
 @import "utils/mixins/font-family";
 @import "utils/mixins/font-size";
+@import "utils/mixins/sr-only";
 
 /* ----------------------------------------------------------------------------- *\
    Placeholders
@@ -51,3 +52,4 @@
 @import "search/Search";
 @import "checkout/Checkout";
 @import "confirmation/Confirmation";
+@import "modal/DetailsModal";

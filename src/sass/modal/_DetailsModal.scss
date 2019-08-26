@@ -1,0 +1,33 @@
+.modal-wrapper {
+    background: #ffffff;
+    border: 1px solid #000000;
+    display: none;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    width: 500px;
+
+    &--shown {
+        display: block;
+    }
+
+    &__description {
+        text-align: left;
+    }
+
+    .Button-icon {
+        padding: 0;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+
+        .Icon {
+            margin-left: 0;
+        }
+
+        path {
+            fill: #002d5b;
+        }
+    }
+}

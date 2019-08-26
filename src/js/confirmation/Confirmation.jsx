@@ -7,7 +7,7 @@ import Image from 'common/Image';
 
 class Confirmation extends PureComponent {
     static propTypes = {
-        email: PropTypes.string.isRequired,
+        location: PropTypes.object,
         selectedSpot: PropTypes.object,
         pushTo: PropTypes.func.isRequired
     };
@@ -36,13 +36,17 @@ class Confirmation extends PureComponent {
 
     render() {
         const {
-            email,
+            location,
             selectedSpot
         } = this.props;
 
-        if (!selectedSpot) {
+        console.log(location);
+
+        if (!selectedSpot || !location.state || !location.state.email) {
             return null;
         }
+
+        const { email } = location.state;
 
         return (
             <div className="Confirmation">
@@ -63,16 +67,12 @@ class Confirmation extends PureComponent {
 
 const mapStateToProps = state => {
     const {
-        checkout: {
-            email
-        },
         spot: {
             selected: selectedSpot
         }
     } = state;
 
     return {
-        email,
         selectedSpot
     };
 };
